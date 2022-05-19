@@ -58,7 +58,8 @@ class Domino {
 	_setupShot() {
 		const raycaster = new THREE.Raycaster();
 		window.addEventListener('click', e => {
-			if (e.ctrlKey) {
+			// shift 누르고 클릭하면 총알이 발사됨!!!
+			if (e.shiftKey) { // ctrlKey는 맥북에서 안되는 이슈가 있음!!! 
 				const width = this.target.clientWidth;
 				const height = this.target.clientHeight;
 				const pt = {
